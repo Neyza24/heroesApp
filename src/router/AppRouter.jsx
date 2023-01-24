@@ -12,18 +12,17 @@ export const AppRouter = () => {
 
       <Routes>
 
-{/* De forma explícita */}
+        {/* De forma explícita */}
         <Route path='login/*' element={
           <PublicRoute>
             <Routes>
-              <Route path='/*' element={<LoginPage/>}/>
+              <Route path='/*' element={<LoginPage />} />
             </Routes>
           </PublicRoute>
         }
         />
 
-{/* Esta forma es manejar por módulos */}
-
+        {/* Esta forma es manejar por módulos */}
         <Route path='/*' element={
           <PrivateRoute>
             <HeroesRoutes />
