@@ -9,12 +9,11 @@ export const HeroPage = () => {
 
   const hero = useMemo( () => getHeroById(id), [ id ]) ;
 
-  //Hay una forma más sencilla de volver atrás
   const onNavigateBack = () => {
     navigate(-1)
   }
 
-  //Aplicamos una condición para evitar el undifined. Si no hay un heroe redirigimos al uduario a una pa´gina que existe
+  //Aplicamos una condición para evitar el undifined. Si no hay un heroe redirigimos al usuario a una página que existe
   if (!hero) {
     return <Navigate to="/marvel" />
   }

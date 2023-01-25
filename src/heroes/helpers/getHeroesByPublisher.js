@@ -1,7 +1,5 @@
 import { heroes } from '../data/heroes';
 
-
-//Función para filtrar de acuerdo a si los heroes son de DC o MARVEL
 export const getHeroesByPublisher = (publisher) => {
 
     const validPublisher = ['DC Comics', 'Marvel Comics'];

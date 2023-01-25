@@ -13,13 +13,12 @@ export const LoginPage = () => {
 
   const onLogin = () => {
     const lastPath = localStorage.getItem('lastPath') || '/';
-    login( 'Neyza Miauw');
+    login( 'Shelly Cooper');
 
     navigate(lastPath, {
       replace: true
   })
 
-  
 
   }
   return (

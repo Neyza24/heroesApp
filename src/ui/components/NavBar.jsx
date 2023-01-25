@@ -1,4 +1,3 @@
-
 import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth';
@@ -6,29 +5,26 @@ import { AuthContext } from '../../auth';
 
 export const Navbar = () => {
 
-   const { user, logout } = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
 
-   console.log( user );
+    console.log(user);
 
-    const  navigate = useNavigate();
+    const navigate = useNavigate();
 
     const onLogout = () => {
         logout();
-        
+
         navigate('/login', {
             replace: true
         });
     }
 
-    
-
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2 sticky-top">
-            
-            
-            <Link 
-                className="navbar-brand ps-4" 
+
+            <Link
+                className="navbar-brand ps-4"
                 to="/"
             >
                 Associations
@@ -37,22 +33,22 @@ export const Navbar = () => {
             <div className="navbar-collapse">
                 <div className="navbar-nav">
 
-                    <NavLink 
+                    <NavLink
                         className={(args) => `nav-item nav-link ${args.isActive ? 'active' : ''}`}
                         to="/marvel"
                     >
                         Marvel
                     </NavLink>
 
-                    <NavLink 
-                        className={(args) => `nav-item nav-link ${args.isActive ? 'active' : ''}`} 
+                    <NavLink
+                        className={(args) => `nav-item nav-link ${args.isActive ? 'active' : ''}`}
                         to="/dc"
                     >
                         DC
                     </NavLink>
 
-                    <NavLink 
-                        className={(args) => `nav-item nav-link ${args.isActive ? 'active' : ''}`} 
+                    <NavLink
+                        className={(args) => `nav-item nav-link ${args.isActive ? 'active' : ''}`}
                         to="/search"
                     >
                         Search
@@ -66,9 +62,9 @@ export const Navbar = () => {
                         {user?.name}
                     </span>
 
-                    <button 
+                    <button
                         className='nav-item nav-link btn'
-                        onClick={ onLogout }
+                        onClick={onLogout}
                     >
                         Logout
                     </button>

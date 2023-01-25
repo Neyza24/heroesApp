@@ -22,7 +22,7 @@ export const AppRouter = () => {
         }
         />
 
-        {/* Esta forma es manejar por módulos */}
+        {/* Por módulos */}
         <Route path='/*' element={
           <PrivateRoute>
             <HeroesRoutes />

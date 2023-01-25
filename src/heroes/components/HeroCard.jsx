@@ -17,7 +17,7 @@ export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance
 
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title"> {superhero} </h5>
+                            <h5 className="card-title mt-4"> {superhero} </h5>
                             <p className="card-text"> {alter_ego} </p>
 
                             {
@@ -29,7 +29,7 @@ export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance
                             </p>
 
                             <Link to={`/hero/${ id }`} className="btn btn-primary">
-                                Mas...
+                                Ver más
                             </Link>
 
                         </div>

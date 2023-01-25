@@ -7,9 +7,8 @@ import { Alert, HeroCard } from '../components';
 
 export const SearchPage = () => {
 
-    //Obtenemos la navegación 
     const navigate = useNavigate();
-    //con el location podemos capturar el query param que seria search, obtner la ubicación donde nos encontramos
+    //con el location podemos capturar el query param que seria search, obtener la ubicación donde nos encontramos
     const location = useLocation();
 
     //nos ayuda a evitar hacer el procesamiento nosotros, los query paramenters son opcionales
@@ -28,7 +27,6 @@ export const SearchPage = () => {
 
     const onSearchSubmit = (event) => {
         event.preventDefault();
-        // if (searchText.trim().length <= 1) return;
 
         //agregando searchText al query param
         navigate(`?q=${searchText}`);

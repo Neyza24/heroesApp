@@ -8,12 +8,10 @@ const initialState = {
     logged: false
 }
 
-//tercer argumento del useReudcer-si regresa null no hay usuario y si es difernte es que hay un usuario
 const init = () => {
     const user = JSON.parse(localStorage.getItem('user'));
 
     return {
-        //si el user existe
         logged: !!user,
         user: user
     }
