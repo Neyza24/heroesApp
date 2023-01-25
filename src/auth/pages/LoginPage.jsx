@@ -22,12 +22,13 @@ export const LoginPage = () => {
 
   }
   return (
-    <div>
+    <div className='d-flex flex-column justify-content-center align-items-center  gap-2 m-4 animate__animated animate__fadeIn animate__slow'>
       <h1>LOGIN PAGE</h1>
-      <hr />
+      
+      <p >Dale click al botón de login para continuar</p>
 
       <button
-        className='btn btn-primary'
+        className='btn btn-primary mt-4'
         onClick={ onLogin }
       >
         Login
